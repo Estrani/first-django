@@ -1,0 +1,12 @@
+{% extends 'listings/base.html' %}
+{% block content %}
+<h1>Listings</h1>
+<p>Nouvelles annonces :<p>
+<!-- TODO : liste des groupes -->
+<ul>
+    {% for ad in ads %}
+    <li>{{ ad.title }}</li>
+    {% endfor %}
+</ul>
+<p>Il y a {{ ads|length }} annonces restantes.</p>     
+{% endblock %}
